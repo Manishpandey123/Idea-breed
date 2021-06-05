@@ -11,14 +11,33 @@
     <link href="./scss/style.scss" rel="stylesheet" />
 <body>
     <section class="header">
-        <img src="Image/img1.png" alt="ideabreed" class="logo" />
-        <ul class="list">
-            <li class="listitem">Home</li>
-            <li class="listitem">About</li>
-            <li class="listitem">Service</li>
-            <li class="listitem">Contact</li>
-        </ul>
+        <div class="container">
+            <div class="header-contents">
+                <nav class="navbar">
+                    <img src="Image/img1.png" alt="ideabreed" class="logo" />
+                    <ul class="list">
+                        <li class="listitem active"><a href="">Home</a></li>
+                        <li class="listitem"><a href="">About</a></li>
+                        <li class="listitem"><a href="">Services</a></li>
+                        <li class="listitem"><a href="">Contact</a></li>
+                    </ul>
+                    <span class="toggle-icon" onclick="openNav()">
+                        <i class="fa fa-bars" size="24"></i>
+                    </span>
+                </nav>
+            </div>
+            
+        </div>
     </section>
+    <div class="list-overlay" id="smNav">
+        <a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">&times;</a>
+        <ul class="list-sm">
+            <li class="listitem active"><a href="">Home</a></li>
+            <li class="listitem"><a href="">About</a></li>
+            <li class="listitem"><a href="">Services</a></li>
+            <li class="listitem"><a href="">Contact</a></li>
+        </ul>
+    </div>
 
     <section class="banner">
         <div class="container">

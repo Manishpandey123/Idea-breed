@@ -18,30 +18,32 @@ ul,li{
     list-style-type: none;
     margin-bottom: 0;
 }
+
+
 .header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 90px;
+    height: 80px;
     box-shadow: 0px 3px 8px 0px rgba(148, 148, 148, 0.3);   
 }
+.header-contents{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
 .logo{  
-    height: 70px;
+    height: 60px;
     width: auto;
-    padding-left: 80px;
 }
 
 .list{
-    color: #707070;
     display: flex;
-    flex-direction: row;
 }
 
 .listitem{
-    font-size: 20px;
-    font-weight: 350;
-    margin-right: 80px;
+    color: #7a7070;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .listitem:first-child{
@@ -49,6 +51,76 @@ ul,li{
     color: #008000;
     font-size: 20px;
 }
+.active{
+    color: #37a027;
+    font-weight: 500;
+}
+
+.list-overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #37883e;
+    overflow-x: hidden;
+    padding-top: 60px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .list-overlay a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .list-overlay a:hover {
+    color: #e1ece1;
+  }
+  
+  .list-overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media only screen and (min-width: 992px) {
+    #list-overlay {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .navbar {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .toggle-icon {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-height: 450px) {
+    .list-overlay {
+      padding-top: 15px;
+    }
+    .list-overlay a {
+      font-size: 18px;
+    }
+  }
+  
+  
+
+
 
 .banner {
     padding: 50px 0px;
